@@ -3,4 +3,4 @@
 alias gitt="sh /git.sh"
 # Alias for fast travel trough directories
 alias hol="cd /home/holberton-system_engineering-devops"
-
+# Execute the bashrc with . ~/.bashrc
