@@ -5,9 +5,6 @@ echo "Insert a message for the initial README:"
 read readMeMessage
 echo "$readMeMessage" >> README.md
 git add README.md
-echo "Insert a message for the first commit:"
-read commitMessage
-git commit -m "$commitMessage"
 for (( i=1; i>0; i++ ))
 do
 	echo "Custom branch? (Default is main), answer 1 for yes or 0 for default"
@@ -54,4 +51,7 @@ git config --global user.email "$email"
 echo "Insert your username:"
 read name
 git config --global user.name "$name"
+echo "Insert a message for the first commit:"
+read commitMessage
+git commit -m "$commitMessage"
 git push -u origin $branch
