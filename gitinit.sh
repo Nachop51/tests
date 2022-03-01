@@ -33,7 +33,7 @@ do
 		echo "Insert a valid number please."
 	fi
 done
-git branch $branch
+git branch -M $branch
 echo "Insert the link for the repository:"
 read repoLink
 git remote add origin $repoLink
