@@ -7,4 +7,6 @@ alias hol="cd /home/holberton-system_engineering-devops"
 alias ndir="sh /ndir.sh"
 # Alias to test a compiled file with the default name
 alias t="sh ./a.out"
+# Alias for vscode git
+alias gitt="sh /gitvs.sh"
 # Execute the bashrc with . ~/.bashrc
