@@ -6,7 +6,7 @@ alias hol="cd /home/holbertonschool-low_level_programming && git pull"
 # Alias for ndir script
 alias ndir="sh /ndir.sh"
 # Alias to test a compiled file with the default name
-alias t="sh ./a.out"
+alias t="./a.out"
 # Alias for vscode git
 alias gitt="sh /gitvs.sh"
 # Execute the bashrc with . ~/.bashrc
