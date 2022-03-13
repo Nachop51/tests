@@ -24,7 +24,7 @@ int main(void)
 	char c;
 	int i;
 
-	_printf(">TODO PRINTF QUE EMPIECE POR > ES TUYO");
+	_printf("\n>TODO PRINTF QUE EMPIECE POR > ES TUYO\n");
 	len = _printf(">Let's try to printf a simple sentence.\n");
 	len2 = printf("Let's try to printf a simple sentence.\n");
 	printf("\n PRINTF TESTS \n\n");
@@ -70,7 +70,7 @@ int main(void)
 	_printf(">%i\n", b);
 	_printf(">PRINTF NORMAL\n");
 	b = printf("%u\n", as);
-	printf(">%i\n", b);
+	printf("%i\n", b);
 	_printf("\n>CASOS DE NUMEROS BINARIOS\nsi tiene > es tu printf\n");
 	_printf(">%b\n", UINT_MAX - 5); /* es un numero par */
 	_printf(">%b\n", 52);
@@ -110,12 +110,15 @@ int main(void)
 	printf("%X\n", 24908);
 	_printf("-> %X\n", 24908);
 	_printf("\n>PROBANDO CASOS SIN FORMATO COMO %z\n\n");
-	_printf("%z %w %j %\n");
+	_printf(">%z %w %j %\n");
 	_printf("-> %X\n", 24908);
-	_printf("\nPROBANDO %%S \n\n");
-	_printf("%S\n", "Best\nSchool");
-	_printf("\n>CASOS DE FORMATEO ADENTRO DE UN STRING\n");
+	_printf("\nPROBANDO %%S\n\n");
+	_printf("%S\n", "\bBest\nSchoo\tl");
+	_printf("%S\n", "Be\nst\tSch\bool");
+	_printf("%S\n", "B\test\bScho\nol");
+	_printf("\n>CASOS DE FORMATEO ADENTRO DE UN STRING\n\n");
 	_printf(">sad%ztad%s\n", "%sASD% %%sa%SDA%asd");
+	printf("sad%ztad%s\n", "%sASD% %%sa%SDA%asd");
 	_printf("\n>PROBANDO CASOS DE COMPARACION DE LENGTH\n\n");
 	len = _printf(">Hello %\n", 24908);
 	len2 = printf("Hello %\n", 24908);	
@@ -126,9 +129,22 @@ int main(void)
 	_printf(">%d\n", len - 1);
 	printf("%d\n", len2);
 	_printf("\n>CONSIDERAR RESTAR 1 PORQUE ESTAMOS SUMANDO EL > XD\n");
-	printf("%p\n", &len);
-	printf("%x\n", &len);
-	_printf("%x\n", &str);
-	printf("%p\n", &str);
+	_printf("\nCASOS DE POINTER ADDRESS (HEXA Y P), TAMBIEN CORROBORANDO EL LENGTH\n\n");
+	len2 = printf("%p\n", &len);
+	len = _printf(">%p\n", &len);
+	_printf(">%d, %d\n", len - 1, len2);
+	len2 = printf("%x\n", &len);
+	len = _printf(">%x\n", &str);
+	_printf(">%d, %d\n", len - 1, len2);
+	len2 = printf("%X\n", &len);
+	len = _printf(">%X\n", &str);
+	_printf(">%d, %d\n", len - 1, len2);
+	len2 = printf("%p\n", &str);
+	len = _printf(">%p\n", &str);
+	_printf(">%d, %d\n", len - 1, len2);
+	len2 = printf("%z%z\n");
+	len = _printf(">%z%z\n");
+	_printf(">%d, %d\n", len - 1, len2);
+	_printf(">%b\n", 90);
 	return (0);
 }
