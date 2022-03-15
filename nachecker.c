@@ -115,7 +115,10 @@ int main(void)
 	_printf("\n>PROBANDO CASOS SIN FORMATO COMO %z\n\n");
 	_printf(">%z %w %j %\n");
 	_printf("\nPROBANDO %%S\n\n");
+<<<<<<< HEAD
 	_printf("%S\n", "Best\nSchool");
+=======
+>>>>>>> 5534e3ed1bc0ebc54313dcf1eb3de2150458c9c3
 	_printf("%S\n", "\nBest\nSchoo\tl");
 	_printf("%S\n", "Be\nst\tSch\bool");
 	_printf("%S\n", "B\test\bScho\nol");
@@ -137,6 +140,7 @@ int main(void)
 	len = _printf(">%p\n", &len);
 	_printf(">%d, %d\n", len - 1, len2);
 	len2 = printf("%x\n", &len);
+<<<<<<< HEAD
 	len = _printf(">%x\n", &len);
 	_printf(">%d, %d\n", len - 1, len2);
 	len2 = printf("%X\n", &len);
@@ -144,12 +148,22 @@ int main(void)
 	_printf(">%d, %d\n", len - 1, len2);
 	len2 = printf("%p\n", &len);
 	len = _printf(">%p\n", &len);
+=======
+	len = _printf(">%x\n", &str);
+	_printf(">%d, %d\n", len - 1, len2);
+	len2 = printf("%X\n", &len);
+	len = _printf(">%X\n", &str);
+	_printf(">%d, %d\n", len - 1, len2);
+	len2 = printf("%p\n", &str);
+	len = _printf(">%p\n", &str);
+>>>>>>> 5534e3ed1bc0ebc54313dcf1eb3de2150458c9c3
 	_printf(">%d, %d\n", len - 1, len2);
 	printf("%p\n", NULL);
 	_printf("%p\n", NULL);
 	len2 = printf("%z%z\n");
 	len = _printf(">%z%z\n");
 	_printf(">%d, %d\n", len - 1, len2);
+<<<<<<< HEAD
 	len = -100;
 	len2 = printf("% d\n", len);
 	len = 100;
@@ -163,5 +177,8 @@ int main(void)
 	_printf(">%d, %d\n", len - 1, len2);
 	_printf(">NO VARIABLE _PRINTF: %s\n");
 	printf("NO VARIABLE PRINTF: %s\n");
+=======
+	_printf(">%b\n", 90);
+>>>>>>> 5534e3ed1bc0ebc54313dcf1eb3de2150458c9c3
 	return (0);
 }
