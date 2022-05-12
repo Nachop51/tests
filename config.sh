@@ -91,7 +91,7 @@ do
 				;;
 		esac
 	done
-	printf "\nComplete!\n\n"
+	printf "\n---- Complete! ----\n\n"
 	while true
 	do
 		printf "Want to continue using the program? y/n\n> "

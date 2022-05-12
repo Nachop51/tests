@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-void print_binary(int num);
+
+int greaterThanZero(int a);
 
 /**
  * main - this is a test
@@ -9,23 +10,28 @@ void print_binary(int num);
  */
 int main(void)
 {
-	print_binary(16);
-	putchar(10);
-	print_binary(328945);
-	putchar(10);
-	print_binary(55);
-	putchar(10);
+	int r = greaterThanZero(2), a = 0;
+
+	if (r == 1)
+	{
+		a = 3242342;
+		printf("Greater than zero\n");
+	}
+	else
+		printf("Lower than zero\n");
+
 	return (0);
 }
 
-void print_binary(int num)
+/**
+ * greaterThanZero - checks if a n is greater than 0
+ * @a: number
+ *
+ * Return: 1 or 0
+ */
+int greaterThanZero(int a)
 {
-	if (num < 2)
-		putchar(num + 48);
-	else
-	{
-		print_binary(num / 2);
-		putchar(num % 2 + 48);
-	}
-	return;
+	if (a > 0)
+		return (1);
+	return (0);
 }
